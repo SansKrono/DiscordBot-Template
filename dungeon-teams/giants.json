@@ -1,0 +1,208 @@
+
+{
+    "dungeon": "Giants",
+    "teams": [
+        {
+            "team_name": "Semi-F2P",
+            "stat_requirement": "ACC: 35%+",
+            "turn_order": "Galleon > Barque > Akhamamir > Veromos > Lyn",
+            "monsters": [
+                {
+                    "name": "Galleon",
+                    "link": "https://www.sw-database.com/galleon",
+                    "rune_sets": "Swift/Shield",
+                    "artifacts": "HP/HP",
+                    "runes": [
+                        {
+                            "slot": 2,
+                            "main_stat": "SPD"
+                        },
+                        {
+                            "slot": 4,
+                            "main_stat": "CR"
+                        },
+                        {
+                            "slot": 6,
+                            "main_stat": "ATK%"
+                        }
+                    ],
+                    "min_stats": [
+                        {
+                            "stat": "HP",
+                            "value": "14k"
+                        },
+                        {
+                            "stat": "ATK",
+                            "value": "700"
+                        },
+                        {
+                            "stat": "DEF",
+                            "value": "300"
+                        },
+                        {
+                            "stat": "SPD",
+                            "value": "143+"
+                        },
+                        {
+                            "stat": "CR",
+                            "value": "max"
+                        }
+                    ]
+                },
+                {
+                    "name": "Barque",
+                    "link": "https://www.sw-database.com/barque",
+                    "rune_sets": "Fatal/Blade",
+                    "artifacts": "HP/HP",
+                    "runes": [
+                        {
+                            "slot": 2,
+                            "main_stat": "ATK%"
+                        },
+                        {
+                            "slot": 4,
+                            "main_stat": "CD"
+                        },
+                        {
+                            "slot": 6,
+                            "main_stat": "ATK%"
+                            
+                        }
+                    ],
+                    "min_stats": [
+                        {
+                            "stat": "HP",
+                            "value": "6k"
+                        },
+                        {
+                            "stat": "ATK",
+                            "value": "1850"
+                        },
+                        {
+                            "stat": "SPD",
+                            "value": "89 -> 142"
+                        },
+                        {
+                            "stat": "CR",
+                            "value": "85%"
+                        }
+                    ]                
+                },
+                {
+                    "name": "Akhamamir",
+                    "link": "https://www.sw-database.com/akhamamir",
+                    "rune_sets": "Rage/Blade",
+                    "runes": [
+                        {
+                            "slot": 2,
+                            "main_stat": "ATK%"
+                        },
+                        {
+                            "slot": 4,
+                            "main_stat": "CD"
+                        },
+                        {
+                            "slot": 6,
+                            "main_stat": "ATK%"
+                            
+                        }
+                    ],
+                    "min_stats": [
+                        {
+                            "stat": "HP",
+                            "value": "10k"
+                        },
+                        {
+                            "stat": "ATK",
+                            "value": "1900"
+                        },
+                        {
+                            "stat": "SPD",
+                            "value": "39 max"
+                        },
+                        {
+                            "stat": "CR",
+                            "value": "85%"
+                        }
+                    ]                    
+                },
+                {
+                    "name": "Veromos",
+                    "link": "https://www.sw-database.com/veromos",
+                    "rune_sets": "Rage/Blade",
+                    "runes": [
+                        {
+                            "slot": 2,
+                            "main_stat": "ATK%"
+                        },
+                        {
+                            "slot": 4,
+                            "main_stat": "CD"
+                        },
+                        {
+                            "slot": 6,
+                            "main_stat": "ATK%"
+                            
+                        }
+                    ],
+                    "min_stats": [
+                        {
+                            "stat": "HP",
+                            "value": "10k"
+                        },
+                        {
+                            "stat": "ATK",
+                            "value": "1400"
+                        },
+                        {
+                            "stat": "SPD",
+                            "value": "38 max"
+                        },
+                        {
+                            "stat": "CR",
+                            "value": "Max"
+                        }
+                    ]                  
+                },
+                {
+                    "name": "Lyn",
+                    "link": "https://www.sw-database.com/lyn",
+                    "rune_sets": "Rage/Blade",
+                    "runes": [
+                        {
+                            "slot": 2,
+                            "main_stat": "ATK%"
+                        },
+                        {
+                            "slot": 4,
+                            "main_stat": "CD"
+                        },
+                        {
+                            "slot": 6,
+                            "main_stat": "ATK%"
+                            
+                        }
+                    ],
+                    "min_stats": [
+                        {
+                            "stat": "HP",
+                            "value": "7k"
+                        },
+                        {
+                            "stat": "ATK",
+                            "value": "1500"
+                        },
+                        {
+                            "stat": "SPD",
+                            "value": "36 max"
+                        },
+                        {
+                            "stat": "CR",
+                            "value": "Max"
+                        }
+                    ]                   
+                }
+            ]
+        }
+    ]
+}

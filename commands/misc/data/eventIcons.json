@@ -1,0 +1,12 @@
+{
+    "default": "https://assets-prd.ignimgs.com/2022/11/10/summoners-war-sky-arena-button-1-1668057399826.jpg?width=300&crop=1%3A1%2Csmart&auto=webp&dpr=2",
+    "events": [
+        {
+            "names": [
+                "lab",
+                "labyrinth"
+            ],
+            "thumbnail": "https://static.wikia.nocookie.net/summoners-war-sky-arena/images/e/e9/Tartarus%27_Labyrinth_Bosses.jpg/revision/latest?cb=20180714084732"
+        }
+    ]
+}

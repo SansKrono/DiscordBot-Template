@@ -1,0 +1,162 @@
+{
+    "stats": [
+    {
+        "aliases" : [
+            "hp",
+            "hp%",
+            "health",
+            "hit points",
+            "health points",
+            "health point",
+            "hit point"
+        ],
+        "name": "Hit points (HP)",
+        "definition": "Hit Points (HP) is the amount of health a unit has. It determines how much damage a unit can withstand before being defeated.",
+        "example": "",
+        "result": ""
+    },
+    {
+        "aliases" : [
+            "atk",
+            "atk%",
+            "attack",
+            "attack percent",
+            "attack percentage",
+            "attack%",
+            "attack power",
+            "attack damage",
+            "attack point",
+            "attack points"
+        ],
+        "name": "Attack (ATK)",
+        "definition": "Attack (ATK) represents the offensive power of a unit. It determines how much damage a unit can deal with its attacks.",
+        "example": "A unit with an ATK stat of 1800 uses a skill that deals 420% of the ATK stat as damage.",
+        "result": "The unit will deal 7560 damage, before reductions are applied."
+    },
+    {
+        "aliases": [
+            "def",
+            "def%",
+            "defense",
+            "defence",
+            "defence%",
+            "defence percent",
+            "defence percentage",
+            "def percent",
+            "def percentage",
+            "defence point",
+            "defence points",
+            "def point",
+            "def points"
+        ],
+        "name": "Defense (DEF)",
+        "definition": "Defense (DEF) represents the defensive power of a unit. It reduces the amount of damage taken from enemy attacks. Damage reduction from DEF is a bit of a grey area, but legend has it that the reduction formula is close to\n`DMG * (1000 / (1000 + (DEF * 3))`",
+        "example": "Two units are dealt 10000 damage. The first unit has a DEF stat of 1000, the second has a DEF stat of 500.",
+        "result": "The first unit takes `10000 * (1000 / (1000 + (3000))` = **2500 DMG**\nThe second unit takes `10000 * (1000 / (1000 + (1500))` = **4000 DMG**"
+    },
+    {
+        "aliases": [
+            "spd",
+            "speed",
+            "speed points",
+            "speed point"
+        ],
+        "name": "Speed (SPD)",
+        "definition": "Speed (SPD) determines how fast a unit's attack bar will fill up. In the result of a tie, the unit who goes first is determined differently depending on the game mode. In Guild content or Arena, a speed tie always goes to the defending unit. For your team (both in PvP and PvE) the unit closest to the first slot (left to right) goes first.",
+        "example": "In an Arena match, your Bastet (leader) and Perna both have a speed of 300. The enemy Woosa also has a speed of 300.",
+        "result": "Woosa (Defender) will go first, followed by Bastet (Leader), then Perna."
+    },
+    {
+        "aliases": [
+            "cr",
+            "cr%",
+            "cri rate",
+            "cri rate%",
+            "crit rate",
+            "crit rate%",
+            "crit percent",
+            "critical rate",
+            "critical rate %",
+            "critical rate percent",
+            "critical rate percentage",
+            "critical rate point",
+            "critical rate points"
+        ],
+        "name": "Critical Rate (CR)",
+        "definition": "CRI Rate stands for Critical Rate and represents the chance of a unit landing a critical hit. Critical hits deal increased damage, determined by the Critical Damage (CD) stat. Crit rate can also be increased/decreased by the elemental advantage of a unit.",
+        "example": "A fire unit with a CR of 60% attacks a wind unit. The elemental advantage increases the CR by 15%.",
+        "result": "The unit has a 75% chance to land a critical hit."
+    },
+    {
+        "aliases": [
+            "cd",
+            "cd%",
+            "cri dmg",
+            "cri dmg%",
+            "crit damage",
+            "crit damage%",
+            "critical dmg",
+            "critical dmg%",
+            "crit dmg",
+            "crit dmg%",
+            "critical damage",
+            "critical damage percent",
+            "critical damage percentage",
+            "critical damage point",
+            "critical damage points"
+        
+        ],
+        "name": "Critical Damage (CD)",
+        "definition": "Critical Damage (CD) multiplies the damage dealt by a critical hit. It is calculated by multiplying the base damage by the CD stat.",
+        "example": "A unit hits for 5000 damage. The attack lands as a critical hit and has a CD stat of 150%.",
+        "result": "The unit deals 7500 damage, before reductions are applied."
+    },
+    {
+        "aliases": [
+            "res",
+            "res%",
+            "resistance",
+            "resistance percent",
+            "resistance rercentage",
+            "resistance point",
+            "resistance points",
+            "resistance%",
+            "resistance %"
+        ],
+        "name": "Resistance (RES)",
+        "definition": "Resistance (RES) increases the chance that a unit will resist a debuff such as a stun, attack break or attack bar reduction. It is calculated against an opponents accuracy to determine the *resistance rate*, which can negate a debuff even if it is activated.\n\n*NOTE: Resistance to any debuff is always 15% at minimum, unless the effect is irresistible.*",
+        "example": "A unit with a **50%** chance to attack break on hit has an accuracy stat of **40%**. The enemy unit has a resistance stat of **90%**. The resulting resistance rate is **50%.**",
+        "result": "50% of the time, the attack break will activate. If it activates, the enemy unit has a 50% chance prevent the debuff from landing."
+    },
+    {
+        "aliases":  [
+            "acc",
+            "acc%",
+            "accuracy",
+            "accuracy percent",
+            "accuracy percentage",
+            "accuracy point",
+            "accuracy points",
+            "accuracy%",
+            "accuracy %"
+        ],
+        "name": "Accuracy (ACC)",
+        "definition": "Accuracy (ACC) reduces the chance that a unit will resist a debuff after it activates. Accuracy directly counters Resistance (RES) by deducting the ACC stat from the RES stat, down to a minimum of 15%.",
+        "example": "A unit with a **50%** chance to attack break on hit has an accuracy stat of **80%**. The enemy unit has a resistance stat of **60%**. If the debuff activate, resistance is reduced from **60% to -20%**.\n\nSince **-20% is below the base resistance of 15%**, this adjusts back up to a *resistance rate* of **15%**.",
+        "result": "50% of the time, the attack break will activate. If it activates, the enemy unit has a 15% chance prevent the debuff from landing."
+    },
+    {
+        "aliases": [
+            "glance",
+            "glancing",
+            "glancing hit",
+            "glancing hits",
+            "glancing damage"
+        ],
+        "name": "Glancing Hits",
+        "definition": "Glancing hits are a special type of hit that occurs when a unit deals damage to an enemy. Glancing Hits deal 30% less damage, cannot be a critical hit and will not apply any Debuff effect including attack gauge reduction.",
+        "example": "A unit with an ATK stat of 1800 uses a skill that deals 420% of the ATK stat, and applies a debuf with a 50% chance. The attack lands as a glancing hit.",
+        "result": "The damage is decreased from 7560 to 5292, before reductions are applied. The chance to activate the debuff becomes 0%."
+    }
+    ]
+}

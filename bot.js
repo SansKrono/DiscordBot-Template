@@ -91,6 +91,7 @@ for (const folder of commandFolders) {
 		.filter((file) => file.endsWith(".js"));
 	for (const file of commandFiles) {
 		const command = require(`./commands/${folder}/${file}`);
+		console.log(`Loaded text command: ${command.name}`)
 		client.commands.set(command.name, command);
 	}
 }
@@ -107,16 +108,23 @@ const slashCommands = fs.readdirSync("./interactions/slash");
 
 // Loop through all files and store slash-commands in slashCommands collection.
 
-for (const module of slashCommands) {
+/**********************************************************************/
+// Registration of Slash-Command Interactions.
+
+
+
+// Store slash-commands in slashCommands collection.
+slashCommands.map((module) => {
 	const commandFiles = fs
 		.readdirSync(`./interactions/slash/${module}`)
-		.filter((file) => file.endsWith(".js"));
-
-	for (const commandFile of commandFiles) {
-		const command = require(`./interactions/slash/${module}/${commandFile}`);
-		client.slashCommands.set(command.data.name, command);
-	}
-}
+		.filter((file) => file.endsWith(".js"))
+		.map((commandFile) => {
+			const command = require(`./interactions/slash/${module}/${commandFile}`);
+			console.log(`Loaded slash command: ${command.name}`);
+			client.slashCommands.set(command.data.name, command);
+		});
+	return commandFiles[0];
+});
 
 /**********************************************************************/
 // Registration of Autocomplete Interactions.
@@ -137,6 +145,7 @@ for (const module of autocompleteInteractions) {
 
 	for (const interactionFile of files) {
 		const interaction = require(`./interactions/autocomplete/${module}/${interactionFile}`);
+		console.log(`Loaded autocompleteInteraction command: ${interaction.name}`)
 		client.autocompleteInteractions.set(interaction.name, interaction);
 	}
 }
@@ -160,6 +169,7 @@ for (const folder of contextMenus) {
 	for (const file of files) {
 		const menu = require(`./interactions/context-menus/${folder}/${file}`);
 		const keyName = `${folder.toUpperCase()} ${menu.data.name}`;
+		console.log(`Loaded context menu: ${keyName}`)
 		client.contextCommands.set(keyName, menu);
 	}
 }
@@ -183,6 +193,7 @@ for (const module of buttonCommands) {
 
 	for (const commandFile of commandFiles) {
 		const command = require(`./interactions/buttons/${module}/${commandFile}`);
+		console.log(`Loaded button command: ${command.id}`)
 		client.buttonCommands.set(command.id, command);
 	}
 }
@@ -206,6 +217,7 @@ for (const module of modalCommands) {
 
 	for (const commandFile of commandFiles) {
 		const command = require(`./interactions/modals/${module}/${commandFile}`);
+		console.log(`Loaded modal command: ${command.id}`)
 		client.modalCommands.set(command.id, command);
 	}
 }
@@ -228,6 +240,7 @@ for (const module of selectMenus) {
 		.filter((file) => file.endsWith(".js"));
 	for (const commandFile of commandFiles) {
 		const command = require(`./interactions/select-menus/${module}/${commandFile}`);
+		console.log(`Loaded select menu: ${command.id}`)
 		client.selectCommands.set(command.id, command);
 	}
 }
